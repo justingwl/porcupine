@@ -114,6 +114,7 @@ class PorcupineDemo(Thread):
 
                 result = porcupine.process(pcm)
                 if num_keywords == 1 and result:
+                    os.system('open -a Siri')
                     print('[%s] detected keyword' % str(datetime.now()))
                 elif num_keywords > 1 and result >= 0:
                     print('[%s] detected %s' % (str(datetime.now()), keyword_names[result]))
